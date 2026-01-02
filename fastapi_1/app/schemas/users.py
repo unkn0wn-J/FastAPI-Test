@@ -2,6 +2,7 @@ from enum import Enum
 
 from pydantic import BaseModel, conint
 
+
 class GenderEnum(str, Enum):
     male = "male"
     female = "female"
@@ -22,5 +23,5 @@ class UserSearchParams(BaseModel):
     model_config = {"extra": "forbid"}
 
     username: str | None = None
-    age: conint(gt=0) | None = None # type: ignore[valid-type]
+    age: conint(gt=0) | None = None  # type: ignore[valid-type]
     gender: GenderEnum | None = None

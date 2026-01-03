@@ -1,4 +1,3 @@
-
 import random
 
 
@@ -32,7 +31,11 @@ class UserModel:
     @classmethod
     def filter(cls, **kwargs):
         """조건에 맞는 객체 리스트 반환"""
-        return [user for user in cls._data if all(getattr(user, key) == value for key, value in kwargs.items())]
+        return [
+            user
+            for user in cls._data
+            if all(getattr(user, key) == value for key, value in kwargs.items())
+        ]
 
     def update(self, **kwargs):
         """객체의 필드 업데이트"""

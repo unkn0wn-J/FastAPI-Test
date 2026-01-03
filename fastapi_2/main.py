@@ -1,14 +1,14 @@
-from fastapi import FastAPI, HTTPException, Path
 from typing import Annotated
-from fastapi import Query
-from app.models.users import UserModel
+
 from app.models.movies import MovieModel
+from app.models.users import UserModel
 from app.schemas.movies import (
     CreateMovieRequest,
-    MovieUpdateRequest,
     MovieResponse,
     MovieSearchParams,
+    MovieUpdateRequest,
 )
+from fastapi import FastAPI, HTTPException, Path, Query
 
 app = FastAPI()
 

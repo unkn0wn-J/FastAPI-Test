@@ -1,5 +1,5 @@
-from fastapi import FastAPI
 from app.configs.tortoise_config import initialize_tortoise
+from fastapi import FastAPI
 
 app = FastAPI()
 

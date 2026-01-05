@@ -1,10 +1,11 @@
 import httpx
+from app import app
+
+# 1. MeetingModel 임포트 추가
+from app.tortoise_models.meeting import MeetingModel
 from starlette.status import HTTP_200_OK
 from tortoise.contrib.test import TestCase
 
-from app import app
-# 1. MeetingModel 임포트 추가
-from app.tortoise_models.meeting import MeetingModel
 
 class TestMeetingRouter(TestCase):
     async def test_api_create_meeting_mysql(self) -> None:

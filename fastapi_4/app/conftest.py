@@ -4,12 +4,11 @@ from unittest.mock import Mock, patch
 
 import pytest
 import pytest_asyncio
+from app.configs import config
+from app.configs.tortoise_config import TORTOISE_APP_MODELS
 from pytest import FixtureRequest
 from tortoise.backends.base.config_generator import generate_config
 from tortoise.contrib.test import finalizer, initializer
-
-from app.configs import config
-from app.configs.tortoise_config import TORTOISE_APP_MODELS
 
 TEST_BASE_URL = "http://test"
 TEST_DB_LABEL = "models"

@@ -1,8 +1,7 @@
+from app.configs import config
 from fastapi import FastAPI
 from tortoise import Tortoise
 from tortoise.contrib.fastapi import register_tortoise
-
-from app.configs import config
 
 TORTOISE_APP_MODELS = [
     "app.tortoise_models.meeting",
